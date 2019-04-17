@@ -1,3 +1,6 @@
 [submodule "extern/libopencm3"]
 	path = extern/libopencm3
 	url = https://github.com/libopencm3/libopencm3
+[submodule "extern/HID_Report_Macros"]
+	path = extern/HID_Report_Macros
+	url = https://github.com/der-b/HID_Report_Macros.git
