@@ -70,7 +70,7 @@ download: main.dfu
 
 clean:
 	rm -f main.o main.elf main.bin main.dfu
-	$(MAKE) -C $(LIBOPENCM3) clean
+	FP_FLAGS="-mfloat-abi=soft" $(MAKE) -C $(LIBOPENCM3) clean
 
 extern/libopencm3/include/libopencm3/efm32/hg/nvic.h:
 	$(MAKE) -C $(LIBOPENCM3)
