@@ -2,6 +2,7 @@ TARGET_CPU=cortex-m0plus
 LIBOPENCM3=./extern/libopencm3
 LIBOPENCM3_LIB=$(LIBOPENCM3)/lib
 LIBOPENCM3_INCLUDE=$(LIBOPENCM3)/include
+HIDREPORT_INCLUDE=./extern/HID_Report_Macros/
 
 # Copied from: https://github.com/im-tomu/tomu-quickstart/
 # We keep this, since we don't want to overwrite the bootloader.
@@ -18,6 +19,9 @@ CFLAGS += -DEFM32HG
 
 # add inclde path for libopencm3 headers
 CFLAGS += -I$(LIBOPENCM3_INCLUDE)
+
+# add include path for hid report
+CFLAGS += -I$(HIDREPORT_INCLUDE)
 
 # specify the cpu architecture
 CFLAGS += -mcpu=$(TARGET_CPU)
